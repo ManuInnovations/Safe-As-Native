@@ -14,6 +14,7 @@ export default class BodyText extends React.Component {
 const styles = StyleSheet.create({
   body: {
     textAlign: 'center',
-    color: 'orange',
+    color: 'blue',
+    padding: 10,
   },
 })
