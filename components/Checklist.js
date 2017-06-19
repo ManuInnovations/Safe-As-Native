@@ -17,7 +17,7 @@ export default class Home extends React.Component {
         <Text>
           {rowData}
           <Text style={styles.dropdown}>
-            Dropdown options here
+            Dropdown
           </Text>
         </Text>
         }
@@ -28,5 +28,8 @@ export default class Home extends React.Component {
 const styles = StyleSheet.create({
   dropdown: {
     backgroundColor: 'red',
+    fontSize: 10,
+    justifyContent: 'space-between',
+    padding: 10,
   }
 });

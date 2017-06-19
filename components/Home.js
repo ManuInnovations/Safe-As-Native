@@ -1,8 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Checklist from './Checklist'
-import HeaderText from './HeaderText'
-import BodyText from './BodyText'
+import HeaderText from './styles/HeaderText'
+import BodyText from './styles/BodyText'
 
 export default class Home extends React.Component {
 
@@ -19,27 +19,11 @@ export default class Home extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  heading: {
-    color: 'green',
-    fontWeight: 'bold',
-    fontSize: 30,
-    textAlign: 'center',
-    fontFamily: 'Arial',
-    fontStyle: 'italic',
-    fontWeight: '500',
-  },
-  bodyText: {
-    color: 'blue',
-    fontSize: 20,
-    textAlign: 'center',
-    lineHeight: 5,
-
-
-  },
   subHeading: {
     color: 'black',
     fontSize: 20,
     textAlign: 'center',
+    padding: 10,
   },
 });
 
