@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Dimensions, ListView } from 'react-native';
+import { StyleSheet, Text, View, Dimensions, ListView, Picker } from 'react-native';
 
 export default class Home extends React.Component {
   constructor(){
@@ -14,20 +14,31 @@ export default class Home extends React.Component {
        <ListView
         dataSource={this.state.dataSource}
         renderRow={(rowData) =>
-          <Text>
-            {rowData}
-            <Text style={styles.dropdown}>
-              Dropdown
+          <View>
+            <Text style={styles.data}>
+              {rowData}
             </Text>
-          </Text>
+            <Picker
+              selectedValue={this.state.answer}
+              onValueChange={(itemValue, itemIndex) => this.setState({answer: itemValue})}
+              style={styles.dropdown}
+              >
+              <Picker.Item label='Yes' value='yes' />
+              <Picker.Item label='No' value='no' />
+              <Picker.Item label='Unsure' value='unsure' />
+            </Picker>
+          </View>
         } />
     )}
 }
 
 const styles = StyleSheet.create({
   dropdown: {
-    backgroundColor: 'red',
-    fontSize: 10,
-    justifyContent: 'space-between',
+    width: 70,
+    height: 30,
+    justifyContent: 'flex-end',
+  },
+  data: {
+    marginBottom: 60,
   }
 });

@@ -11,21 +11,18 @@ export default class Home extends React.Component {
     return(
       <View>
         <HeaderText>
-          This is the home screen
+          Welcome to Safe-As
         </HeaderText>
 
         <BodyText>
-          Safe-As will help you create a Health and Safety Site Visit report.
+          This app will help you create a Health and Safety Site Visit report.
         </BodyText>
 
         <Text style={styles.subHeading}>
           Safety Checklist:
         </Text>
 
-        <Checklist />
-
-        <Text></Text>
-
+        <Checklist style={styles.list} />
         <HomeButton />
 
       </View>
@@ -39,7 +36,11 @@ const styles = StyleSheet.create({
     color: 'black',
     fontSize: 20,
     textAlign: 'center',
-    padding: 10,
+    padding: 0,
+    marginBottom: 10,
+  },
+  list: {
+    backgroundColor: 'grey',
   },
 });
 

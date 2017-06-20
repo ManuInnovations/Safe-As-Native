@@ -11,8 +11,8 @@ export default class HomeButton extends Component {
   render() {
     return (
       <Button
-        containerStyle={{padding:10, height:45, overflow:'hidden', borderRadius:4, backgroundColor: 'white'}}
-        style={{fontSize: 20, color: 'green'}}>
+        containerStyle={{padding:10, height:40, borderRadius:4, backgroundColor: 'green', flex: .5, marginBottom: 10}}
+        style={{fontSize: 20, color: 'white',}}>
           Create a New Report
       </Button>
     );
