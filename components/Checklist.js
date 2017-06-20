@@ -14,22 +14,20 @@ export default class Home extends React.Component {
        <ListView
         dataSource={this.state.dataSource}
         renderRow={(rowData) =>
-        <Text>
-          {rowData}
-          <Text style={styles.dropdown}>
-            Dropdown
+          <Text>
+            {rowData}
+            <Text style={styles.dropdown}>
+              Dropdown
+            </Text>
           </Text>
-        </Text>
-        }
-        />
+        } />
     )}
-  }
+}
 
 const styles = StyleSheet.create({
   dropdown: {
     backgroundColor: 'red',
     fontSize: 10,
     justifyContent: 'space-between',
-    padding: 10,
   }
 });
