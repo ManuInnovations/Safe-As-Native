@@ -4,6 +4,7 @@ import { TabNavigator, StackNavigator } from 'react-navigation'
 import Home from '../screens/Home'
 import NavBar from '../screens/NavBar'
 import NewReport from '../screens/NewReport'
+import About from '../screens/About'
 
 export const NewReportStack = StackNavigator ({
   NewReportP1: {
@@ -23,6 +24,12 @@ export const Tabs = TabNavigator ({
     navigationOptions: {
       tabBarLabel: 'New Report',
     },
+  },
+  AboutSafeAs:{
+    screen: About,
+    navigationOptions:{
+      tabBarLabel: 'About Safe-As'
+    }
   }
 })
 
