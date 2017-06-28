@@ -8,30 +8,29 @@ export default class NewReport extends React.Component {
     this.state = { text: '' };
   }
 
-  goToNextPage = (user) => {
-    this.props.navigation.navigate('NewReportP2');
-  };
-
   render() {
     return (
       <View style={styles.container}>
-          <Text >Your name:</Text>
-          <TextInput
-            onChangeText={(text) => this.setState({text})}
-            value={this.state.text}
-          />
-        <Button
-          onPress={() => this.goToNextPage()}
-        >
-          Next
-        </Button>
+      <Text>
+        Personal Protective Clothing & Equipment (PPE)
+      </Text>
+      <Text>
+        Select gear you currently have:
+      </Text>
+      <Text>
+        Safety Boots:
+      </Text>
+      <Text>
+        High visibility vest:
+      </Text>
+
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  button: {
+  reportBox: {
     flexDirection: 'row',
   },
   container: {

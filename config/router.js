@@ -5,10 +5,14 @@ import Home from '../screens/Home'
 import NavBar from '../screens/NavBar'
 import NewReport from '../screens/NewReport'
 import About from '../screens/About'
+import Page2PPEGear from '../screens/Page2PPEGear'
 
 export const NewReportStack = StackNavigator ({
   NewReportP1: {
     screen: NewReport,
+  },
+  NewReportP2:{
+    screen: Page2PPEGear,
   },
 })
 
