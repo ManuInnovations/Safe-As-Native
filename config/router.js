@@ -5,21 +5,21 @@ import Home from '../screens/Home'
 import NavBar from '../screens/NavBar'
 import NewReport from '../screens/NewReport'
 
-// export const NewReport = StackNavigator ({
-//   NewReportP1: {
-//     screen: NewReport,
-//   },
-// })
+export const NewReportStack = StackNavigator ({
+  NewReportP1: {
+    screen: NewReport,
+  },
+})
 
 export const Tabs = TabNavigator ({
   Home: {
     screen: Home,
     navigationOptions: {
       tabBarLabel: 'Home',
-    }
+    },
   },
   NewReport: {
-    screen: NewReport,
+    screen: NewReportStack,
     navigationOptions: {
       tabBarLabel: 'New Report',
     },
@@ -29,6 +29,9 @@ export const Tabs = TabNavigator ({
 export const Root = StackNavigator ({
   Tabs: {
     screen: Tabs,
+    navigationOptions: {
+      title: 'Safe As',
+    },
   },
   Home: {
     screen: Home,
