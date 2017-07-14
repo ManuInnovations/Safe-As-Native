@@ -1,30 +1,13 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import Button from 'react-native-button';
+import React, { Component } from 'react';
+import { Root, Tabs } from './config/router'
+// import { StyleSheet, Text, View } from 'react-native';
 
-import NavBar from './components/NavBar'
-import Home from './components/Home'
-
-export default class App extends React.Component {
-
-  render() {
+class App extends Component {
+  render () {
     return (
-      <View style={styles.container}>
-
-        <NavBar/>
-
-        <Home />
-
-
-      </View>
-    );
+        <Root />
+    )
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-  },
-});
+export default App;
