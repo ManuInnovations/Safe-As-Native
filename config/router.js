@@ -1,7 +1,9 @@
 import React from 'react'
-import { TabNavigator, StackNavigator } from 'react-navigation'
+import { TabNavigator, StackNavigator, DrawerNavigator } from 'react-navigation'
 
 import Home from '../screens/Home'
+// import HomeScreen from '../screens/HomeScreen2'
+import DrawerButton from './drawerButton'
 import NavBar from '../screens/NavBar'
 import NewReport from '../screens/NewReport'
 import About from '../screens/About'
@@ -46,5 +48,17 @@ export const Root = StackNavigator ({
   },
   Home: {
     screen: Home,
+    navigationOptions: {
+      header: navigation =>({
+        title: 'Hamburger',
+        left: <DrawerButton navigation={navigation} />,
+      })
+    },
   },
 })
+
+export const MainNavigator = DrawerNavigator({
+  Home: {
+    screen: Root,
+  },
+});
