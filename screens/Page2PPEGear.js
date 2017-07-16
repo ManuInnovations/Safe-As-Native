@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput } from 'react-native';
+import { StyleSheet, Text, View, TextInput, ScrollView } from 'react-native';
 import Button from 'react-native-button';
 import SelectMultiple from 'react-native-select-multiple';
 
@@ -21,15 +21,18 @@ export default class page2Report extends React.Component {
 
   onSelectionsChange = (selectedPPE) =>{
     this.setState({ selectedPPE })
+    console.log('page 3 state,', this.state);
   }
 
-  goToNextPage = (user) => {
-    this.props.navigation.navigate('NewReportP3');
+  goToNextPage = () => {
+    console.log('triggered go to next page', this.props.navigation.navigate(''));
+    this.props.navigation.navigate('NewReportP3')
   };
 
   render() {
     return (
       <View style={styles.container}>
+      <ScrollView>
         <Text>
           Personal Protective Clothing & Equipment (PPE)
         </Text>
@@ -46,6 +49,7 @@ export default class page2Report extends React.Component {
         >
           Next
         </Button>
+      </ScrollView>
       </View>
     );
   }
@@ -53,11 +57,8 @@ export default class page2Report extends React.Component {
 
 const styles = StyleSheet.create({
   reportBox: {
-    flexDirection: 'row',
+
   },
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
   }
 })

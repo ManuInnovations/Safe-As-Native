@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput } from 'react-native';
+import { StyleSheet, Text, View, TextInput, ScrollView } from 'react-native';
 import Button from 'react-native-button';
 
 export default class NewReport extends React.Component {
@@ -25,6 +25,7 @@ export default class NewReport extends React.Component {
   render() {
     return (
       <View style={styles.container}>
+      <ScrollView>
         <Text >Site Visit Date:</Text>
         <TextInput
           onChangeText={(visitDate) => this.setState({visitDate})}
@@ -71,6 +72,7 @@ export default class NewReport extends React.Component {
       >
           Next
         </Button>
+      </ScrollView>
       </View>
     );
   }
@@ -78,11 +80,9 @@ export default class NewReport extends React.Component {
 
 const styles = StyleSheet.create({
   button: {
-    flexDirection: 'row',
+
   },
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
+
   }
 })

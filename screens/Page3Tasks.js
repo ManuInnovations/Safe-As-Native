@@ -17,11 +17,9 @@ export default class page3Report extends React.Component {
 
 const styles = StyleSheet.create({
   reportBox: {
-    flexDirection: 'row',
+
   },
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
+
   }
 })
