@@ -6,6 +6,7 @@ import NavBar from '../screens/NavBar'
 import NewReport from '../screens/NewReport'
 import About from '../screens/About'
 import Page2PPEGear from '../screens/Page2PPEGear'
+import Page3Tasks from '../screens/Page3Tasks'
 
 export const NewReportStack = StackNavigator ({
   NewReportP1: {
@@ -13,6 +14,9 @@ export const NewReportStack = StackNavigator ({
   },
   NewReportP2:{
     screen: Page2PPEGear,
+  },
+  NewReportP3:{
+    screen: Page3Tasks,
   },
 })
 
