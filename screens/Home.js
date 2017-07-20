@@ -23,7 +23,7 @@ export default class Home extends React.Component {
         </Text>
 
         <Checklist style={styles.list} />
-        <HomeButton />
+        
 
       </View>
 
