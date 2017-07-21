@@ -20,7 +20,7 @@ export default class page3Report extends React.Component {
       tasks: taskList
     })
     console.log(taskList);
-    // console.log('this is the task', this.state);
+    console.log(this.state.tasks);
   }
 
   goToNextPage = (user) => {
@@ -34,7 +34,7 @@ export default class page3Report extends React.Component {
           This is the tasks
         </Text>
         <TextInput
-          onChangeText={() => this.pushTask}
+          onChangeText={(task) => this.setState({task})}
           value={this.state.task}
         />
         <Button
