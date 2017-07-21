@@ -1,18 +1,26 @@
 import React from 'react';
 import { StyleSheet, Text, View, TextInput } from 'react-native';
 import Button from 'react-native-button';
+import { concat, _ } from 'lodash/concat'
+
+const taskList=[]
 
 export default class page3Report extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      tasks: '',
+      tasks:[],
     };
   }
 
-  onTextChange = (tasks) =>{
-    console.log('this is the task', tasks);
-    // this.setState({ tasks })
+
+  pushTask = () =>{
+    taskList.push(this.state.task)
+    this.setState({
+      tasks: taskList
+    })
+    console.log(taskList);
+    // console.log('this is the task', this.state);
   }
 
   goToNextPage = (user) => {
@@ -26,9 +34,13 @@ export default class page3Report extends React.Component {
           This is the tasks
         </Text>
         <TextInput
-          onChangeText={(tasks) => this.setState({tasks})}
-          value={this.state.tasks}
+          onChangeText={() => this.pushTask}
+          value={this.state.task}
         />
+        <Button
+          onPress={() => this.pushTask()}>
+          Submit
+        </Button>
         <Button
           onPress={() => this.goToNextPage()}
         >
