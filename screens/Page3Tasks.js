@@ -19,8 +19,6 @@ export default class page3Report extends React.Component {
     this.setState({
       tasks: taskList
     })
-    console.log(taskList);
-    console.log(this.state.tasks);
   }
 
   goToNextPage = (user) => {
@@ -41,6 +39,14 @@ export default class page3Report extends React.Component {
           onPress={() => this.pushTask()}>
           Submit
         </Button>
+        {this.state.tasks.map((task) => {
+            return(
+              <Text>
+                {task}
+              </Text>
+            )
+          })
+        }
         <Button
           onPress={() => this.goToNextPage()}
         >
