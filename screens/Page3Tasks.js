@@ -39,9 +39,9 @@ export default class page3Report extends React.Component {
           onPress={() => this.pushTask()}>
           Submit
         </Button>
-        {this.state.tasks.map((task) => {
+        {this.state.tasks.map((task, i) => {
             return(
-              <Text>
+              <Text key={i}>
                 {task}
               </Text>
             )
