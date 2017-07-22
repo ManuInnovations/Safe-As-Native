@@ -23,7 +23,7 @@ export default class Home extends React.Component {
         </Text>
 
         <Checklist style={styles.list} />
-        
+
 
       </View>
 
@@ -40,6 +40,6 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   list: {
-    backgroundColor: 'grey',
+
   },
 });

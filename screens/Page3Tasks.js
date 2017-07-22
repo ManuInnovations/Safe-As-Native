@@ -1,7 +1,9 @@
 import React from 'react';
 import { StyleSheet, Text, View, TextInput } from 'react-native';
 import Button from 'react-native-button';
-import { concat, _ } from 'lodash/concat'
+import { concat, _ } from 'lodash/concat';
+
+import Page3TaskCheck from './Page3TaskCheck'
 
 const taskList=[]
 
@@ -41,9 +43,10 @@ export default class page3Report extends React.Component {
         </Button>
         {this.state.tasks.map((task, i) => {
             return(
-              <Text key={i}>
+              <Button style={styles.taskButton} key={i}>
                 {task}
-              </Text>
+
+              </Button>
             )
           })
         }
@@ -58,10 +61,13 @@ export default class page3Report extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  reportBox: {
-
-  },
   container: {
 
+  },
+  taskButton: {
+    borderColor: '#5e6472',
+    borderWidth: 1,
+    color: '#5e6472',
+    backgroundColor: 'white',
   }
 })
